@@ -18,6 +18,35 @@
 
     <name>Connector SPI</name>
     <description>Core Service Provider Interface for Universal Data Connectors</description>
+    <url>https://github.com/dataconnector/connector-spi</url>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/dataconnector/connector-spi/issues</url>
+    </issueManagement>
+
+    <scm>
+        <connection>scm:git:git://github.com/dataconnector/connector-spi.git</connection>
+        <developerConnection>scm:git:ssh://github.com/dataconnector/connector-spi.git</developerConnection>
+        <url>https://github.com/dataconnector/connector-spi</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>haiphamcoder</id>
+            <name>Hai Pham Ngoc</name>
+            <email>ngochai285nd@gmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
 
     <dependencies>
         <dependency>
