@@ -47,7 +47,6 @@
         </license>
     </licenses>
 
-
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
