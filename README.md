@@ -13,6 +13,7 @@ The Connector SPI defines a standardized interface for data connectors, enabling
   - `DataSource`: For reading data from sources
   - `DataSink`: For writing data to destinations
   - `DataStreamSource`: For streaming data from sources
+  - `DataStreamSink`: For streaming data to destinations
 - **Configuration Management**: Type-safe configuration access through `ConnectorContext`
 - **Metadata Support**: Built-in metadata tracking for connectors
 - **Result Tracking**: Comprehensive operation results with metrics
@@ -81,6 +82,16 @@ public interface DataStreamSource extends DataConnector {
 }
 ```
 
+#### DataStreamSink
+
+Interface for streaming data to a sink:
+
+```java
+public interface DataStreamSink extends DataConnector {
+    StreamWriter createWriter(ConnectorContext context) throws IOException;
+}
+```
+
 ### Model Classes
 
 #### ConnectorContext
@@ -124,6 +135,16 @@ ConnectorResult result = ConnectorResult.builder()
 ```
 
 ### Streaming
+
+#### StreamWriter
+
+Writer interface for pushing records into a streaming destination:
+
+```java
+StreamWriter writer = dataStreamSink.createWriter(context);
+writer.writeBatch(records);
+writer.close();
+```
 
 #### StreamObserver
 
